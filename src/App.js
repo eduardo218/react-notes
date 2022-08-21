@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss'
 
-function App() {
+import React, { useContext } from 'react'
+import Header from './components/header/header.component'
+import Search from './components/search/search.component'
+import NoteList from './components/notes-list/note-list.component'
+
+import { NotesContext } from './contexts/notes.context'
+
+
+const App = () => {
+  const { darkMode } = useContext(NotesContext)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main className={darkMode ? 'dark-mode' : ''}>
+      <div className='container'>
+        <Header />
+        <Search />
+        <NoteList />
+      </div>
+    </main>
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,13 @@
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+        color: green;
+    }
+
+    .dark-mode {
+        color: white;
+    }
+}

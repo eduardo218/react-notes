@@ -1,0 +1,15 @@
+.default-button {
+    border: 0;
+    outline: 0;
+    background-color: green;
+    color: white;
+    padding: .8rem;
+    border-radius: 30px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+        opacity: .8;
+    }
+}
